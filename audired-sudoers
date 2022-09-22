@@ -1,0 +1,6 @@
+# Cmnd alias specification
+Cmnd_Alias VPN = /usr/sbin/service openvpn stop, /usr/sbin/service openvpn start, /usr/bin/tee /etc/openvpn/credentials, /usr/bin/sed -i 's/auth-user-pass/auth-user-pass /etc/openvpn/credentials/g' /etc/openvpn/credentials
+
+#audired ALL= tee /etc/openvpn/credentials
+guido ALL= (NOPASSWORD) VPN
+
